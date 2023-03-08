@@ -7,16 +7,16 @@ resource "aws_instance" "demo_ec2_instance" {
   instance_type = var.instance_type
 
   tags = {
-  Name = var.instance_name
+    Name = var.instance_name
   }
 }
 
 resource "aws_s3_bucket" "log_bucket" {
-bucket = "my-tf-log-bucket"
-# acl    = "log-delivery-write"
-}
+  bucket = "my-tf-log-bucket"
+  # acl    = "log-delivery-write"
 
-logging {
+  logging {
     target_bucket = aws_s3_bucket.log_bucket.id
     target_prefix = "log/"
+  }
 }

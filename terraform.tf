@@ -1,7 +1,7 @@
 terraform {
   cloud {
     organization = "aditiabhang"
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
 
     workspaces {
       name = "tfc_run_tasks"
