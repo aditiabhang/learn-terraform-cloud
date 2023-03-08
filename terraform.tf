@@ -1,5 +1,4 @@
 terraform {
-
   cloud {
     organization = "aditiabhang"
     hostname = "app.terraform.io"
