@@ -7,10 +7,9 @@ resource "aws_instance" "demo_instance" {
   instance_type = var.instance_type
   key_name      = var.my_key
 
-    tags = {
-    Name = var.instance_name
+  tags = {
+  Name = var.instance_name
   }
-
 }
 
 # resource "aws_key_pair" "TF_key" {
