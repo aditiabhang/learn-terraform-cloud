@@ -11,11 +11,11 @@ resource "aws_instance" "demo_ec2_instance" {
   }
 }
 
-resource "aws_s3_bucket" "log_bucket" {
-  bucket = "my-tf-log-bucket"
-  # acl    = "log-delivery-write"
+# resource "aws_s3_bucket" "log_bucket" {
+#   bucket = "my-tf-log-bucket"
+#   # acl    = "log-delivery-write"
 
-  logging {
-    target_prefix = "log/"
-  }
-}
+#   logging {
+#     target_prefix = "log/"
+#   }
+# }
