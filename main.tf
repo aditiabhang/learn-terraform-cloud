@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo_ec2" {
-  ami           = "ami-006dcf34c09e50022"
+  ami           = "ami-0557a15b87f6559cf"
   instance_type = var.instance_type
   # key_name      = var.my_key
 
