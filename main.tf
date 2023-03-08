@@ -2,7 +2,7 @@ provider "aws" {
   region = var.region
 }
 
-resource "aws_instance" "demo_instance" {
+resource "aws_instance" "demo_ec2" {
   ami           = "ami-006dcf34c09e50022"
   instance_type = var.instance_type
   # key_name      = var.my_key
