@@ -13,3 +13,7 @@ variable "instance_name" {
   default     = "Provisioned by Terraform"
 }
 
+variable "my_key" {
+   description = "AWS key pair"
+   default = "aditi-key-pair"
+}

@@ -22,4 +22,4 @@ resource "aws_instance" "demo_instance" {
   tags = {
     Name = var.instance_name
   }
-}
+
