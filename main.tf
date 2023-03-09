@@ -10,12 +10,3 @@ resource "aws_instance" "demo_ec2_instance" {
     Name = var.instance_name
   }
 }
-
-# resource "aws_s3_bucket" "log_bucket" {
-#   bucket = "my-tf-log-bucket"
-#   # acl    = "log-delivery-write"
-
-#   logging {
-#     target_prefix = "log/"
-#   }
-# }
