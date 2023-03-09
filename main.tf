@@ -32,6 +32,6 @@ resource "aws_security_group" "demo_security_group" {
 
 resource "aws_s3_bucket" "demo_s3_bucket" {
   bucket = var.s3_bucket_name
-  depends_on = [aws_instance.demo_ec2_instance.id] # Dependency to EC2-Instance
+  depends_on = [aws_instance.demo_ec2_instance] # Dependency to EC2-Instance
   force_destroy = true
 }
