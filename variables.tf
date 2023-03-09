@@ -12,3 +12,8 @@ variable "instance_name" {
   description = "EC2 instance name"
   default     = "Provisioned by Terraform"
 }
+
+variable "demo_security_group" {
+  description = "Name for the Security group"
+  default = "Demo Security Group"
+}
