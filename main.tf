@@ -21,7 +21,7 @@ resource "aws_instance" "demo_ec2_instance" {
 }
 
 resource "aws_security_group" "demo_security_group" {
-  name = var.demo_security_group
+  name = var.security_group_name
   ingress {
     from_port   = 8080
     to_port     = 8080

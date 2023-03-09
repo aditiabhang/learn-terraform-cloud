@@ -13,7 +13,7 @@ variable "instance_name" {
   default     = "Provisioned by Terraform"
 }
 
-variable "demo_security_group" {
+variable "security_group_name" {
   description = "Name for the Security group"
   default = "Demo Security Group"
 }
