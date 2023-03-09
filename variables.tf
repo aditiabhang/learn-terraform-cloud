@@ -17,3 +17,14 @@ variable "security_group_name" {
   description = "Name for the Security group"
   default = "Demo Security Group"
 }
+
+variable "server_port" {
+  description = "The port the server will use for HTTP requests"
+  type        = number
+  default     = 8080
+}
+
+variable "s3_bucket_name" {
+  description = "Name of the S3 bucket"
+  default     = "S3 Bucket name"
+}

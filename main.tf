@@ -10,7 +10,7 @@ resource "aws_instance" "demo_ec2_instance" {
   user_data = <<-EOF
               #!/bin/bash
               echo "Hello, World" > index.html
-              nohup busybox httpd -f -p 8080 &
+              nohup busybox httpd -f -p ${var.server_port} &
               EOF
 
   user_data_replace_on_change = true
@@ -23,9 +23,15 @@ resource "aws_instance" "demo_ec2_instance" {
 resource "aws_security_group" "demo_security_group" {
   name = var.security_group_name
   ingress {
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = var.server_port
+    to_port     = var.server_port
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
+
+resource "aws_s3_bucket" "demo_s3_bucket" {
+  bucket = var.s3_bucket_name
+  depends_on = [aws_instance.demo_ec2_instance.id] # Dependency to EC2-Instance
+  force_destroy = true
 }
