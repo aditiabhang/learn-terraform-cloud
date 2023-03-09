@@ -26,5 +26,5 @@ variable "server_port" {
 
 variable "s3_bucket_name" {
   description = "Name of the S3 bucket"
-  default     = "s3_bucket_name"
+  default     = "aditi_demo_s3_bucket"
 }
